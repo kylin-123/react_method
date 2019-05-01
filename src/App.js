@@ -1,18 +1,15 @@
 import React, { Component } from "react";
 import BindComponentMethodThis from "./component/BindComponentMethodThis";
+import Home from "./pages/Home";
+import ConnectContext from "./pages/ConnectContext";
 
 @BindComponentMethodThis
 class App extends Component {
   constructor(props) {
     super(props);
-    console.log(this);
     this.state = {
       name: "sdf"
     };
-  }
-
-  componentDidMount() {
-    //console.log(this.props.path);
   }
 
   getData() {
@@ -26,7 +23,8 @@ class App extends Component {
             asdf
           </button>
         </div>
-        <div className="content">asd</div>
+        <Home />
+        <ConnectContext />
       </div>
     );
   }

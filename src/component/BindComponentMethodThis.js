@@ -13,7 +13,6 @@ const BindComponentMethodThis = WrappedComponent => {
   const _constructor = WrappedComponent.prototype;
   const _methodsArry = Object.getOwnPropertyNames(_constructor);
   const _this = new WrappedComponent();
-  debugger;
   _methodsArry.forEach(item => {
     if (!_lifecycleMethods.includes(item)) {
       _constructor[item] = _constructor[item].bind(_this);
